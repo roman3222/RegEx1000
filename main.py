@@ -56,8 +56,10 @@ def duplicates_filter():
                     cont[6] = contact[6]
 
     for contact in contacts_list:
+        contact = list(filter(None, contact))
         if contact not in new_list:
             new_list.append(contact)
+
     return new_list
 
 
